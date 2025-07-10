@@ -23,12 +23,6 @@
       font-size: 25px;
     }
 
-    .texto_boton{
-      font-size: 20px;
-      max-width: 500px; 
-      margin: 0 auto;
-    }
-
     .titulo{
       font-size: 50px;
       max-width: 500px; 
@@ -116,4 +110,10 @@
       filter: contrast(120%);
       align-items: center;
       justify-content: center;
+    }
+
+    .all{
+      display: grid;
+      justify-content: center;
+      grid-gap: 30px;
     }
