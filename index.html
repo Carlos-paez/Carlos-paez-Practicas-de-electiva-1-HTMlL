@@ -25,7 +25,7 @@
 <body>
 
   <audio src="MHFU.mp3" autoplay></audio>
-
+  
   <header class="baner">
     <h1><strong><em>
       Monster Hunter Info
@@ -38,6 +38,12 @@
         </strong></em></h2>
                
         <img src="assets/rathalos fondo.jpg">
+
+        <div id="cookieConsent" style="position: fixed; bottom: 0; left: 0; right: 0; background: #000; color: #fff; text-align: center; padding: 1rem; font-family: Arial, sans-serif; z-index: 9999;">
+         <p>Usamos cookies propias y de terceros para mejorar nuestros servicios. <a href="politica-cookies.html" style="color: #4dfeff; text-decoration: underline;">Más información</a></p>
+         <button id="acceptCookies" style="background: transparent; border: 2px solid #fff; color: #fff; padding: 0.5rem 1rem; cursor: pointer; font-size: 1rem;">Aceptar</button>
+        </div>
+
 
         <p class="texto"><strong>
           Monster Hunter es una franquicia de videojuegos de rol y acción con temática fantástica, desarrollada y publicada por Capcom. La serie comenzó en 2004 con el lanzamiento del primer juego para PlayStation 2 y desde entonces ha sido adaptada a múltiples plataformas, incluyendo PC, consolas y dispositivos móviles.
@@ -83,6 +89,28 @@
         <a class="targeta" href="mailto:carlospaezguerra@gmail.com?subject=Monster Hunter fan&body=Hola, me gustaría obtener más información.">Contáctanos</a>
 
  </div>
+
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+  const cookieConsent = document.getElementById('cookieConsent');
+  const acceptBtn = document.getElementById('acceptCookies');
+
+  // Verificar si ya aceptó
+  if (localStorage.getItem('cookiesAccepted') === 'true') {
+    cookieConsent.style.display = 'none';
+  }
+
+  // Al aceptar
+  acceptBtn.addEventListener('click', function() {
+    localStorage.setItem('cookiesAccepted', 'true');
+    cookieConsent.style.display = 'none';
+    // Aquí puedes cargar scripts de analítica o publicidad si quieres
+  });
+});
+
+
+</script>
 
 </body>
 </html>
